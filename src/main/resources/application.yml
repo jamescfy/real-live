@@ -1,0 +1,38 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: test-demo
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/my_database
+    username: postgres
+    password: cfy6mvp
+    show-sql: true
+    freemarker:
+      suffix: .ftl
+#  thymeleaf:
+#    mode: HTML5
+#    encoding: utf-8
+#    servlet:
+#      content-type: text/html
+#    cache: false #开发时关闭缓存,不然没法看到实时页面
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.example.demo.model
+
+api2doc:
+  title: Api2Doc示例项目——接口文档
+  icon: https://spring.io/img/homepage/icon-spring-framework.svg
+  enabled: true
+
+#
+#logging:
+#  level:
+#    root: info
+#    com.macro.mall: debug
+#
+#host:
+#  mall:
+#   admin: http://localhost:8080
