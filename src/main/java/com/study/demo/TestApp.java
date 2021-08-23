@@ -10,6 +10,7 @@ import com.terran4j.commons.api2doc.config.EnableApi2Doc;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 /**
  * 应用启动入口
@@ -22,6 +23,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class TestApp {
     public static void main(String[] args) {
-        SpringApplication.run(TestApp.class, args);
+
+        // 返回我们的IOC容器
+        ConfigurableApplicationContext run = SpringApplication.run(TestApp.class, args);
+
+        //查看容器里面的组件
+        String[] beanDefinitionNames = run.getBeanDefinitionNames();
+        for(String name : beanDefinitionNames){
+            System.out.println(name);
+        }
     }
 }
