@@ -1,5 +1,12 @@
 package com.study.demo.springboot2;
 
+import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.boot.autoconfigure.AutoConfigurationImportSelector;
+import org.springframework.boot.autoconfigure.AutoConfigurationPackage;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Import;
+
 /**
  * @Author cfy
  * @Date 2021-8-19 下午 5:06
@@ -28,7 +35,15 @@ public class SpringBoot2 {
     // @Conditional 条件装配注解
     // @ImportResource  导入spring的配置文件
     // 配置绑定
-       // @ConfigurationProperties(prefix = "")  + @Component
+       // @ConfigurationProperties(prefix = "")  + @Component  只有在容器里的组件，才能拥有springBoot提供的功能
        // @EnableConfigurationProperties() + @ConfigurationProperties
+    // 自动配置原理
+        // 启动类注解 -> @SpringBootConfiguration @EnableAutoConfiguration  @ComponentScan
+        // @SpringBootConfiguration -->  代表当前是一个配置类
+        // @ComponentScan           -->  指定扫描哪些包
+        // @EnableAutoConfiguration -->   @AutoConfigurationPackage  + @Import(AutoConfigurationImportSelector.class)  127
+                                        //按照条件装配规则按需配置
+    //
+
 
 }
