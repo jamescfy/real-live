@@ -43,7 +43,24 @@ public class SpringBoot2 {
         // @ComponentScan           -->  指定扫描哪些包
         // @EnableAutoConfiguration -->   @AutoConfigurationPackage  + @Import(AutoConfigurationImportSelector.class)  127
                                         //按照条件装配规则按需配置
-    //
-
-
+    //  默认会在底层配置所有的组件，但是用户配置了就以用户配的优先
+    // 总结：
+        // 1、SpringBoot会先加载所有有的自动配置类  ***AutoConfiguration
+        // 2、每个自动配置类按照条件选择生效
+        // 3、生效的配置类就会给容器中装配很多的组件
+        // 4、只要容器中有这些组件，相当于这些功能就有了
+        // 5、只要用户有自己配置的，就以用户配置的优先 || 用户修改配置文件的值
+    // 引入场景依赖 ---> 查看自动配置了哪些（选） debug=true ---> 修改配置或者自定义组件或者自定义器***Customizer---> --->
+    //======================================================================================================
+    // 开发小技巧
+        // lombok  @ToString@ToString
+                    //@Data
+                    //@NoArgsConstructor
+                    //@AllArgsConstructor
+                    //@EqualsAndHashCode
+                    //@Slf4j
+        // devtools 热部署 ctrl+F9 重新编译
+        // spring Initailizr 向导
+   // 核心  ------------------------------------------------------------------------------------------
+    // 配置文件 
 }

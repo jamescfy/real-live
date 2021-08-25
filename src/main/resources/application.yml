@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 9999
 
 spring:
   application:
@@ -12,6 +12,9 @@ spring:
     show-sql: true
     freemarker:
       suffix: .ftl
+  banner:
+    image:
+      location: bb.jpg
 #  thymeleaf:
 #    mode: HTML5
 #    encoding: utf-8
@@ -26,6 +29,12 @@ api2doc:
   title: Api2Doc示例项目——接口文档
   icon: https://spring.io/img/homepage/icon-spring-framework.svg
   enabled: true
+
+# k:
+#   -v1
+#   -v2
+#   -v3
+#单引号不转义 双引号会转义
 
 #
 #logging:
