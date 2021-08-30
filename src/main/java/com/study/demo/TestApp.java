@@ -36,7 +36,7 @@ public class TestApp {
         //查看容器里面的组件
         String[] beanDefinitionNames = run.getBeanDefinitionNames();
         for(String name : beanDefinitionNames){
-            System.out.println(name);
+//            System.out.println(name);
         }
     }
 }

@@ -1,5 +1,5 @@
 server:
-  port: 9999
+  port: 8888
 
 spring:
   application:
@@ -15,6 +15,18 @@ spring:
   banner:
     image:
       location: bb.jpg
+#静态资源访问前缀
+#  mvc:
+#    static-path-pattern: /res/**
+#restful风格支持(开启页面表单提交) <input name="_method" value="put"> ||客户端请求不需要
+#  mvc:
+#    hiddenmethod:
+#      filter:
+#        enabled: true
+
+
+
+
 #  thymeleaf:
 #    mode: HTML5
 #    encoding: utf-8

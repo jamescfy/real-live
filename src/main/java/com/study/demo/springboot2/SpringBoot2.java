@@ -53,7 +53,7 @@ public class SpringBoot2 {
     // 引入场景依赖 ---> 查看自动配置了哪些（选） debug=true ---> 修改配置或者自定义组件或者自定义器***Customizer---> --->
     //======================================================================================================
     // 开发小技巧
-        // lombok  @ToString@ToString
+        // lombok  @ToString  @ToString
                     //@Data
                     //@NoArgsConstructor
                     //@AllArgsConstructor
@@ -61,6 +61,32 @@ public class SpringBoot2 {
                     //@Slf4j
         // devtools 热部署 ctrl+F9 重新编译
         // spring Initailizr 向导
+        // StringUtils.hasLength()
    // 核心  ------------------------------------------------------------------------------------------
-    // 配置文件 
+    // 配置文件
+    // web开发
+        // SpringMVC
+            //支持webjars
+        /*
+         *  欢迎页
+         *  图标
+         *  静态资源配置原理： WebMvcAutoConfiguration生效  spring.mvc  spring.resource handlerMapping处理器映射
+         *  请求参数处理：
+         *      1、请求映射  hiddenHttpMethod
+         *      2、请求映射原理 dispatcherServlet  handlerMapping
+         *              doGet -> doService -. doDispatch
+         *          所有的请求映射都在handlerMapping中，请求进来，挨个尝试所有的handlerMapping看是否有请求信息，如果有
+         *          就找到了请求对应handler，如果没有就继续下一个循环handlerMapping，我们需要自定义的映射处理也可以自己给
+         *          容器中放handlerMapping
+         *      3、参数
+         *          基本注解：
+         *              @PathVariable(" ")  @PathVariable Map<String，String>
+         *              @RequestHeader(" ")
+         *              @RequestParam(" ")
+         *              @CookieValue(" ")
+         *              @RequestBody(" ") ---POST 请求体的数据
+         *              @RequestAttribute(" ") ---获取request域属性
+         *              @MatrixVariable(" ") ------矩阵变量
+        */
+
 }
