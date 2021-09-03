@@ -78,6 +78,8 @@ public class SpringBoot2 {
          *          所有的请求映射都在handlerMapping中，请求进来，挨个尝试所有的handlerMapping看是否有请求信息，如果有
          *          就找到了请求对应handler，如果没有就继续下一个循环handlerMapping，我们需要自定义的映射处理也可以自己给
          *          容器中放handlerMapping
+         *          再为handlerMapping找到适配器HandlerAdapter，然后执行目标方法（参数解析器确定将要执行的目标方法的参数值），
+         *
          *      3、参数
          *          基本注解：
          *              @PathVariable(" ")  @PathVariable Map<String，String>
@@ -86,7 +88,9 @@ public class SpringBoot2 {
          *              @CookieValue(" ")
          *              @RequestBody(" ") ---POST 请求体的数据
          *              @RequestAttribute(" ") ---获取request域属性
-         *              @MatrixVariable(" ") ------矩阵变量
+         *              @MatrixVariable(" ") ------矩阵变量  分号隔开  默认禁用 手动开启
+         *
+         *  
         */
 
 }
