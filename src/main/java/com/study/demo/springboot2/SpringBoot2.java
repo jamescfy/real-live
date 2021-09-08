@@ -62,7 +62,15 @@ public class SpringBoot2 {
         // devtools 热部署 ctrl+F9 重新编译
         // spring Initailizr 向导
         // StringUtils.hasLength()
-   // 核心  ------------------------------------------------------------------------------------------
+    /*  model.foreach((name,value)-> {
+                if(value != null){
+                    request.setAttribute(name,value)};
+                else{
+                    request.remove(name);
+                }
+                });
+     */
+    // 核心  ------------------------------------------------------------------------------------------
     // 配置文件
     // web开发
         // SpringMVC
@@ -79,7 +87,8 @@ public class SpringBoot2 {
          *          就找到了请求对应handler，如果没有就继续下一个循环handlerMapping，我们需要自定义的映射处理也可以自己给
          *          容器中放handlerMapping
          *          再为handlerMapping找到适配器HandlerAdapter，然后执行目标方法（参数解析器确定将要执行的目标方法的参数值），
-         *
+         *          还有returnValueHandlers 返回值处理器，
+         *          真正执行目标方法invokeForRequest
          *      3、参数
          *          基本注解：
          *              @PathVariable(" ")  @PathVariable Map<String，String>
@@ -89,8 +98,16 @@ public class SpringBoot2 {
          *              @RequestBody(" ") ---POST 请求体的数据
          *              @RequestAttribute(" ") ---获取request域属性
          *              @MatrixVariable(" ") ------矩阵变量  分号隔开  默认禁用 手动开启
+         *      ---------------------------------
+         *      支持servletAPI  --- ServletRequestMethodArgumentResolver
+         *      支持复杂参数
+         *              Map、Model(里面的数据会被放到request的请求域中，request.setAttribute())  底层调用mavContainer.getModel()
+         *              RedirectAttributes(重定向携带数据)
+         *              ServletResponse
+         *        自定义对象参数
+         *              数据绑定  WebDataBinder web数据绑定器，利用Converters将数据转成把数据封装到JavaBean中
+         *               判断是否为简单类型
          *
-         *  
         */
 
 }

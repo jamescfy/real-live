@@ -5,7 +5,7 @@ package com.study.demo.shangcai;
  * @Date 2021-9-2 上午 9:51
  * @Version 1.0
  */
-public class Meeting0902 {
+public class Meeting090208 {
     /**
      *  1、流程公用
      *  2、台账 -- 公用
@@ -18,6 +18,16 @@ public class Meeting0902 {
      *  9、business  随手记
      *  10、budget下 budgeting  LdgNewBgtexcutionV + Probg  安全上产费
      *
+     */
+
+    /*
+     *  待办
+     *  已办
+     *  我的委外  由我发起的
+     *
+     *  委外管理
+     *      委外发起：
+     *   体检数据从外部来
      *
      */
 }
