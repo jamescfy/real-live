@@ -89,6 +89,7 @@ public class SpringBoot2 {
          *          再为handlerMapping找到适配器HandlerAdapter，然后执行目标方法（参数解析器确定将要执行的目标方法的参数值），
          *          还有returnValueHandlers 返回值处理器，
          *          真正执行目标方法invokeForRequest
+         *          还是要找到最原始的request
          *      3、参数
          *          基本注解：
          *              @PathVariable(" ")  @PathVariable Map<String，String>
@@ -106,7 +107,18 @@ public class SpringBoot2 {
          *              ServletResponse
          *        自定义对象参数
          *              数据绑定  WebDataBinder web数据绑定器，利用Converters将数据转成把数据封装到JavaBean中
-         *               判断是否为简单类型
+         *              判断是否为简单类型
+         *        ------------------------------------------------------
+         *        数据响应与内容协商
+         *              返回值处理器 returnValueHandlers
+         *              @ResponseBody 注解 ---> RequestResponseBodyMethodProcessor
+         *                  HttpMessageConverter
+         *                      MediaType -- 媒体类型  内容协商(浏览器默认会以请求头的方式告诉服务器，他能接收什么样的内容类型)
+         *                                                      服务器根据自身能力决定服务器能生产什么样的内容类型数据
+         *                          MappingJackson2HttpMessageConverter把对象转为json
+         *              响应json
+         *
+         *
          *
         */
 
