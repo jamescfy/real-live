@@ -5,7 +5,7 @@ package com.study.demo.shangcai;
  * @Date 2021-9-2 上午 9:51
  * @Version 1.0
  */
-public class Meeting090208 {
+public class Meeting09020815 {
     /**
      *  1、流程公用
      *  2、台账 -- 公用
@@ -30,4 +30,11 @@ public class Meeting090208 {
      *   体检数据从外部来
      *
      */
+    /**
+     * 工务经办人  经办人
+     *  规则让系统使用人员自己维护
+     *  快速立项 对比
+     *
+     */
+
 }
